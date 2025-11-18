@@ -1,1 +1,52 @@
-index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My GitHub PWA</title>
+
+  <!-- Manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- PWA icons -->
+  <link rel="icon" href="icons/icon-192.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="icons/icon-512.png">
+
+  <meta name="theme-color" content="#0a84ff">
+
+  <script defer src="sw-register.js"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      text-align: center;
+    }
+    #startupBtn {
+      padding: 12px 20px;
+      background: #0a84ff;
+      border: none;
+      color: white;
+      margin-top: 20px;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>My GitHub Hosted PWA</h1>
+  <p>This is an installable PWA hosted on GitHub Pages.</p>
+
+  <button id="startupBtn">Add to Startup</button>
+
+  <script>
+    document.getElementById('startupBtn').addEventListener('click', () => {
+      // Point this to your hosted EXE
+      window.location.href = "https://regan-kay.github.io/my-pwa/launcher/MyPWALauncher.exe";
+    });
+  </script>
+
+</body>
+</html>
